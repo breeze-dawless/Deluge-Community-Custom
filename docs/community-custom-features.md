@@ -169,7 +169,7 @@ menu and in the horizontal menu chain. Available on synths and kit rows.
 |-----------|--------|
 | Songs from the regular firmware with saturation | Sound the same: the old 0-15 drive is converted to the 0-50 scale on loading; Asymmetry starts at 0. |
 | Songs saved with this build, opened in the regular firmware | The regular firmware reads the 0-50 drive as much more drive. Custom LFO shapes load as Triangle, 8-bar sync as 4 bars; Wavefold Symmetry / Tone are ignored; a Vowel filter loads as Off. |
-| Songs from the Owlet custom build | Saturation, Wavefold, Vowel filter and LFO shapes load as saved. |
+| Songs from Lama (the custom build based on Owlet) | Saturation, Wavefold, Vowel filter and LFO shapes load as saved. |
 
 ---
 
