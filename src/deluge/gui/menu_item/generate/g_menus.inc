@@ -3,13 +3,15 @@ filter::FilterModeSelection lpfModeMenu{STRING_FOR_MODE, STRING_FOR_LPF_MODE, fi
 filter::FilterParam lpfFreqMenu{STRING_FOR_FREQUENCY, STRING_FOR_LPF_FREQUENCY, params::LOCAL_LPF_FREQ, filter::FilterSlot::LPF, filter::FilterParamType::FREQUENCY};
 filter::FilterParam lpfResMenu{STRING_FOR_RESONANCE, STRING_FOR_LPF_RESONANCE, params::LOCAL_LPF_RESONANCE, filter::FilterSlot::LPF, filter::FilterParamType::RESONANCE};
 filter::FilterParam lpfMorphMenu{STRING_FOR_LPF_MORPH, params::LOCAL_LPF_MORPH, filter::FilterSlot::LPF, filter::FilterParamType::MORPH};
-std::array<MenuItem*, 4> child0 = {
+filter::VowelRaw lpfVowelRawMenu{STRING_FOR_VOWEL_RAW};
+std::array<MenuItem*, 5> child0 = {
     &lpfModeMenu,
     &lpfFreqMenu,
     &lpfResMenu,
     &lpfMorphMenu,
+    &lpfVowelRawMenu,
 };
-HorizontalMenu lpfMenu{STRING_FOR_LPF, child0};
+filter::LpfMenu lpfMenu{STRING_FOR_LPF, child0};
 filter::FilterModeSelection hpfModeMenu{STRING_FOR_MODE, STRING_FOR_HPF_MODE, filter::FilterSlot::HPF};
 filter::FilterParam hpfFreqMenu{STRING_FOR_FREQUENCY, STRING_FOR_HPF_FREQUENCY, params::LOCAL_HPF_FREQ, filter::FilterSlot::HPF, filter::FilterParamType::FREQUENCY};
 filter::FilterParam hpfResMenu{STRING_FOR_RESONANCE, STRING_FOR_HPF_RESONANCE, params::LOCAL_HPF_RESONANCE, filter::FilterSlot::HPF, filter::FilterParamType::RESONANCE};
@@ -201,37 +203,45 @@ std::array<MenuItem*, 4> child14 = {
 };
 envelope::EnvelopeMenu env4Menu{STRING_FOR_ENVELOPE_MENU_TITLE, child14, 3};
 lfo::Type lfo1TypeMenu{STRING_FOR_SHAPE, STRING_FOR_LFO_TYPE, LFO1_ID};
+lfo::ShapeEditor lfo1ShapeEditorMenu{STRING_FOR_LFO_DRAW, LFO1_ID};
 lfo::Sync lfo1SyncMenu{STRING_FOR_SYNC, STRING_FOR_LFO_SYNC, LFO1_ID};
 patched_param::Integer lfo1RateMenu{STRING_FOR_RATE, STRING_FOR_LFO1_RATE, params::GLOBAL_LFO_FREQ_1};
-std::array<MenuItem*, 3> child15 = {
+std::array<MenuItem*, 4> child15 = {
     &lfo1TypeMenu,
+    &lfo1ShapeEditorMenu,
     &lfo1SyncMenu,
     &lfo1RateMenu,
 };
 HorizontalMenu lfo1Menu{STRING_FOR_LFO1, child15};
 lfo::Type lfo2TypeMenu{STRING_FOR_SHAPE, STRING_FOR_LFO_TYPE, LFO2_ID};
+lfo::ShapeEditor lfo2ShapeEditorMenu{STRING_FOR_LFO_DRAW, LFO2_ID};
 lfo::Sync lfo2SyncMenu{STRING_FOR_SYNC, STRING_FOR_LFO_SYNC, LFO2_ID};
 patched_param::Integer lfo2RateMenu{STRING_FOR_RATE, STRING_FOR_LFO2_RATE, params::LOCAL_LFO_LOCAL_FREQ_1};
-std::array<MenuItem*, 3> child16 = {
+std::array<MenuItem*, 4> child16 = {
     &lfo2TypeMenu,
+    &lfo2ShapeEditorMenu,
     &lfo2SyncMenu,
     &lfo2RateMenu,
 };
 HorizontalMenu lfo2Menu{STRING_FOR_LFO2, child16};
 lfo::Type lfo3TypeMenu{STRING_FOR_SHAPE, STRING_FOR_LFO_TYPE, LFO3_ID};
+lfo::ShapeEditor lfo3ShapeEditorMenu{STRING_FOR_LFO_DRAW, LFO3_ID};
 lfo::Sync lfo3SyncMenu{STRING_FOR_SYNC, STRING_FOR_LFO_SYNC, LFO3_ID};
 patched_param::Integer lfo3RateMenu{STRING_FOR_RATE, STRING_FOR_LFO3_RATE, params::GLOBAL_LFO_FREQ_2};
-std::array<MenuItem*, 3> child17 = {
+std::array<MenuItem*, 4> child17 = {
     &lfo3TypeMenu,
+    &lfo3ShapeEditorMenu,
     &lfo3SyncMenu,
     &lfo3RateMenu,
 };
 HorizontalMenu lfo3Menu{STRING_FOR_LFO3, child17};
 lfo::Type lfo4TypeMenu{STRING_FOR_SHAPE, STRING_FOR_LFO_TYPE, LFO4_ID};
+lfo::ShapeEditor lfo4ShapeEditorMenu{STRING_FOR_LFO_DRAW, LFO4_ID};
 lfo::Sync lfo4SyncMenu{STRING_FOR_SYNC, STRING_FOR_LFO_SYNC, LFO4_ID};
 patched_param::Integer lfo4RateMenu{STRING_FOR_RATE, STRING_FOR_LFO4_RATE, params::LOCAL_LFO_LOCAL_FREQ_2};
-std::array<MenuItem*, 3> child18 = {
+std::array<MenuItem*, 4> child18 = {
     &lfo4TypeMenu,
+    &lfo4ShapeEditorMenu,
     &lfo4SyncMenu,
     &lfo4RateMenu,
 };
